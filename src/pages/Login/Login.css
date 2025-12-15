@@ -1,0 +1,16 @@
+.submit-btn {
+  background: linear-gradient(rgb(109, 109, 109), rgb(202, 202, 202), rgb(109, 109, 109));
+}
+
+.submit-btn:active,
+.submit-btn:focus-visible {
+  background: linear-gradient(rgb(202, 202, 202), rgb(109, 109, 109), rgb(202, 202, 202));
+}
+
+.login-form {
+  background: linear-gradient(to bottom, rgb(109, 109, 109), rgb(202, 202, 202));
+}
+
+input {
+  background: linear-gradient(to top, rgb(109, 109, 109), rgb(202, 202, 202));
+}
