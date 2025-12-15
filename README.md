@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+🔐 React Login Form (TypeScript + JSON Server)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple login form built with React and TypeScript, using JSON Server as a mock backend for authentication.
 
-Currently, two official plugins are available:
+This project demonstrates basic client-side authentication logic and API interaction with a local JSON database.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
 
-## React Compiler
+Login form built with React + TypeScript
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Mock authentication using JSON Server
 
-## Expanding the ESLint configuration
+Credentials loaded from a local JSON file
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Simple and clear project structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Easy to run and customize
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🧰 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+React
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+TypeScript
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+JSON Server
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm
+
+📁 Project Structure
+.
+├── database
+│   └── db.json
+├── src
+│   ├── components
+│   ├── pages
+│   ├── App.tsx
+│   └── main.tsx
+└── README.md
+
+⚙️ Prerequisites
+
+Make sure you have the following installed:
+
+Node.js (v16 or higher recommended)
+
+npm
+
+🚀 Getting Started
+1️⃣ Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Run JSON Server
+
+JSON Server must run on port 3000.
+
+npx json-server --watch ./database/db.json --port 3000
+
+
+The JSON database file is located at:
+
+./database/db.json
+
+4️⃣ Start the React app
+npm start
+
+🔑 Authentication Logic
+
+User credentials are fetched from JSON Server
+
+Login validation is handled on the client side
+
+JSON Server simulates a backend API
+
+⚠️ This project is intended for learning and demonstration purposes only.
+Do not use this authentication approach in production environments.
+
+📌 Notes
+
+JSON Server must be running before submitting the login form
+
+Default API base URL: http://localhost:3000
+
+Can be easily connected to a real backend later
+
+📄 License
+
+This project is open-source and free to use for educational purposes.
